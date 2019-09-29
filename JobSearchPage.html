@@ -21,14 +21,9 @@
 	<script type="text/javascript">
 		var techJobs= ["Software",""];
 		var medical = ["Medical","Department of Veterans Affairs - Lead Medical Support Assistant - FullTime", "Quest Guilford County - Veterinary Health Care Technician - FullTime"," Veterans Health Administration - Health System Administrator - FullTime", "US Department of Veterans Affairs - Staff Physician - Nephrology - FullTime", "Banfield Pet Hospital - Doctor of Veterinary Medicine - FullTime","U.S. Department of Veterans Affairs - Physician (General Surgeon) - FullTime", "PetIQ - Clinic Assistant - Veterinary - FullTime", " Veterans Health Administration - Registered Nurse - FullTime","Veterans Affairs - Registered Nurse (PACT) - FullTime", "Veterans Affairs - Medical Support Assistant - FullTime", "Veterans Affairs - Nursing Assistant - FullTime", "Concentra - Staff Physician - FullTime"];
-		var medLinks = ["http://google.com","https://www.usajobs.gov/GetJob/ViewDetails/526163900?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic", "https://www.governmentjobs.com/jobs/2071617-0/veterinary-health-care-technician?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"];
+		var medLinks = ["http://google.com","https://www.usajobs.gov/GetJob/ViewDetails/526163900?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic", "https://www.governmentjobs.com/jobs/2071617-0/veterinary-health-care-technician?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic", "http://federalgovernmentjobs.us/jobs/Health-System-Administrator-546781100.html?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"];
 		var up = medical;
-		var list = "m";
-		//list = document.getElementById('textbox').innerHTML;
 
-		function links(){
-			window.location.href= medLinks[1];
-		}
 
 		function btns() {
   var btn1 = document.createElement("BUTTON");
@@ -45,9 +40,7 @@
   var btn12 = document.createElement("BUTTON");
   	
     //btn1.style.backgroundImage = "url('cloudsImage.jpg')";
-    if (list==="s") {
-    	up=techJobs;
-    }
+    
     btn1.innerHTML = up[1]; 
     btn2.innerHTML = up[2]; 
     btn3.innerHTML = up[3]; 
@@ -61,7 +54,20 @@
 	btn11.innerHTML = up[11];
 	btn12.innerHTML = up[12]; 
 
-    // btn1.onclick=links();
+    btn1.onclick = function(){
+    	window.location.href = medLinks[1];
+    	return false;
+    };
+
+    btn2.onclick = function(){
+    	window.location.href = medLinks[2];
+    	return false;
+    };
+
+    btn3.onclick = function(){
+    	window.location.href = medLinks[3];
+    	return false;
+    };
 
 	btn1.style.height= "200px";
 	btn1.style.width= "200px";
