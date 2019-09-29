@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
-<body onLoad=''>
+<body onLoad='btns()'>
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -25,11 +25,10 @@
     <!-- Project Section -->
     <div class="w3-container w3-padding-32" id="projects">
         <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Job Search</h3>
-        <label>Enter Job criteria:</label>
-        <input id="textbox" type="text" />
-        <button class="w3-button w3-light-grey" id="btn1" onclick="btns()" style="width:120px">Search</button>
+        <h2><b>Based on your criteria here's what we found: </b></h2>
+        
     </div>
-    <br><br>
+    <br>
     <div id="this">
 
     </div>
@@ -38,10 +37,9 @@
 
 	<script type="text/javascript">
 		var techJobs= ["Software",""];
-		var medical = ["Medical","Department of Veterans Affairs - Lead Medical Support Assistant - FullTime", "Quest Guilford County - Veterinary Health Care Technician - FullTime"," Veterans Health Administration - Health System Administrator - FullTime", "US Department of Veterans Affairs - Staff Physician - Nephrology - FullTime", "Banfield Pet Hospital - Doctor of Veterinary Medicine - FullTime","U.S. Department of Veterans Affairs - Physician (General Surgeon) - FullTime", "PetIQ - Clinic Assistant - Veterinary - FullTime", " Veterans Health Administration - Registered Nurse - FullTime","Veterans Affairs - Registered Nurse (PACT) - FullTime", "Veterans Affairs - Medical Support Assistant - FullTime", "Veterans Affairs - Nursing Assistant - FullTime", "Concentra - Staff Physician - FullTime"];
-		var medLinks = ["http://google.com","https://www.usajobs.gov/GetJob/ViewDetails/526163900?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic", "https://www.governmentjobs.com/jobs/2071617-0/veterinary-health-care-technician?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"];
+		var medical = ["Medical","Department of Veterans Affairs - Lead Medical Support Assistant - FullTime", "Quest Guilford County - Veterinary Health Care Technician - FullTime"," Health System Administrator (Deputy Network Director)", "US Department of Veterans Affairs - Staff Physician - Nephrology - FullTime", "Banfield Pet Hospital - Doctor of Veterinary Medicine - FullTime","U.S. Department of Veterans Affairs - Physician (General Surgeon) - FullTime", "PetIQ - Clinic Assistant - Veterinary - FullTime", " Veterans Health Administration - Registered Nurse - FullTime","Veterans Affairs - Registered Nurse (PACT) - FullTime", "Veterans Affairs - Medical Support Assistant - FullTime", "Veterans Affairs - Nursing Assistant - FullTime", "Concentra - Staff Physician - FullTime"];
+		var medLinks = ["http://google.com","https://www.linkedin.com/jobs/view/lead-medical-support-assistant-at-veterans-affairs-veterans-health-administration-1474512305/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic", "https://www.governmentjobs.com/jobs/2071617-0/veterinary-health-care-technician?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic","https://dejobs.org/durham-nc/health-system-administrator-deputy-network-director/1B606BBE37B04FECB13C3202E207A744/job/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"];
 		var up = medical;
-		var list = "m";
 		//list = document.getElementById('textbox').innerHTML;
 
 		function links(){
@@ -61,23 +59,36 @@
   var btn10 = document.createElement("BUTTON");
   var btn11 = document.createElement("BUTTON");
   var btn12 = document.createElement("BUTTON");
+
+  btn1.style.border ="thick solid black";
+  btn2.style.border ="thick solid black";
+  btn3.style.border ="thick solid black";
+  btn4.style.border ="thick solid black";
+  btn5.style.border ="thick solid black";
+  btn6.style.border ="thick solid black";
+  btn7.style.border ="thick solid black";
+  btn8.style.border ="thick solid black";
+  btn9.style.border ="thick solid black";
+  btn10.style.border ="thick solid black";
+  btn11.style.border ="thick solid black";
+  btn12.style.border ="thick solid black";
+
+  
   	
     //btn1.style.backgroundImage = "url('cloudsImage.jpg')";
-    if (list==="s") {
-    	up=techJobs;
-    }
+   
     btn1.innerHTML = up[1]; 
     btn2.innerHTML = up[2]; 
     btn3.innerHTML = up[3]; 
     btn4.innerHTML = up[4]; 
     btn5.innerHTML = up[5];
-	btn6.innerHTML = up[6]; 
-	btn7.innerHTML = up[7]; 
-	btn8.innerHTML = up[8];
-	btn9.innerHTML = up[9];
-	btn10.innerHTML = up[10];
-	btn11.innerHTML = up[11];
-	btn12.innerHTML = up[12]; 
+    btn6.innerHTML = up[6]; 
+	  btn7.innerHTML = up[7]; 
+	  btn8.innerHTML = up[8];
+	  btn9.innerHTML = up[9];
+	  btn10.innerHTML = up[10];
+	  btn11.innerHTML = up[11];
+	  btn12.innerHTML = up[12]; 
 
     btn1.onclick = function(){
     	window.location.href = medLinks[1];
