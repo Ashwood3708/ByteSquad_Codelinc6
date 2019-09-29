@@ -4,38 +4,49 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
+<body onLoad=''>
 
-<body onload="">
-	
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-	<div class="w3-bar w3-white w3-wide w3-padding w3-card">
-	<a href="index.html" class="w3-bar-item w3-button"><b>UP</b>stream</a>
-		<!-- Float links to the right. Hide them on small screens -->
-		<div class="w3-right w3-hide-small">
-			<a href="index.html" class="w3-bar-item w3-button">Home</a>
-			<a href="index.html" class="w3-bar-item w3-button">Logout</a>
-			<a href="about.html" class="w3-bar-item w3-button">About</a>
-		</div>
-	</div>
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="index.html" class="w3-bar-item w3-button"><b>UP</b>stream</a>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+            <a href="index.html" class="w3-bar-item w3-button">Home</a>
+            <a href="index.html" class="w3-bar-item w3-button">Logout</a>
+            <a href="about.html" class="w3-bar-item w3-button">About</a>
+        </div>
+    </div>
 </div>
-	
-	<div class="block">
 
-    <label>Enter Job criteria</label>
-    <input id="textbox" type="text" />
-    <button id="btn1" onclick="btns()" style="height:21px; width:120px">Search</button>
-	
-	</div>
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+    
+    <!-- Project Section -->
+    <div class="w3-container w3-padding-32" id="projects">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Job Search</h3>
+        <label>Enter Job criteria:</label>
+        <input id="textbox" type="text" />
+        <button class="w3-button w3-light-grey" id="btn1" onclick="btns()" style="width:120px">Search</button>
+    </div>
+    <br><br>
+    <div id="this">
 
-	<br><br>
+    </div>
+    <!-- End page content -->
+</div>
 
 	<script type="text/javascript">
 		var techJobs= ["Software",""];
 		var medical = ["Medical","Department of Veterans Affairs - Lead Medical Support Assistant - FullTime", "Quest Guilford County - Veterinary Health Care Technician - FullTime"," Veterans Health Administration - Health System Administrator - FullTime", "US Department of Veterans Affairs - Staff Physician - Nephrology - FullTime", "Banfield Pet Hospital - Doctor of Veterinary Medicine - FullTime","U.S. Department of Veterans Affairs - Physician (General Surgeon) - FullTime", "PetIQ - Clinic Assistant - Veterinary - FullTime", " Veterans Health Administration - Registered Nurse - FullTime","Veterans Affairs - Registered Nurse (PACT) - FullTime", "Veterans Affairs - Medical Support Assistant - FullTime", "Veterans Affairs - Nursing Assistant - FullTime", "Concentra - Staff Physician - FullTime"];
-		var medLinks = ["http://google.com","https://www.usajobs.gov/GetJob/ViewDetails/526163900?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic", "https://www.governmentjobs.com/jobs/2071617-0/veterinary-health-care-technician?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic", "http://federalgovernmentjobs.us/jobs/Health-System-Administrator-546781100.html?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"];
+		var medLinks = ["http://google.com","https://www.usajobs.gov/GetJob/ViewDetails/526163900?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic", "https://www.governmentjobs.com/jobs/2071617-0/veterinary-health-care-technician?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"];
 		var up = medical;
+		var list = "m";
+		//list = document.getElementById('textbox').innerHTML;
 
+		function links(){
+			window.location.href= medLinks[1];
+		}
 
 		function btns() {
   var btn1 = document.createElement("BUTTON");
@@ -52,7 +63,9 @@
   var btn12 = document.createElement("BUTTON");
   	
     //btn1.style.backgroundImage = "url('cloudsImage.jpg')";
-    
+    if (list==="s") {
+    	up=techJobs;
+    }
     btn1.innerHTML = up[1]; 
     btn2.innerHTML = up[2]; 
     btn3.innerHTML = up[3]; 
@@ -70,17 +83,28 @@
     	window.location.href = medLinks[1];
     	return false;
     };
-
     btn2.onclick = function(){
     	window.location.href = medLinks[2];
     	return false;
     };
-
     btn3.onclick = function(){
     	window.location.href = medLinks[3];
     	return false;
     };
-
+    
+    // btn1.onclick=links();
+    btn1.classList.add("w3-light-grey", "w3-button");
+    btn2.classList.add("w3-light-grey", "w3-button");
+    btn3.classList.add("w3-light-grey", "w3-button");
+    btn4.classList.add("w3-light-grey", "w3-button");
+    btn5.classList.add("w3-light-grey", "w3-button");
+    btn6.classList.add("w3-light-grey", "w3-button");
+    btn7.classList.add("w3-light-grey", "w3-button");
+    btn8.classList.add("w3-light-grey", "w3-button");
+    btn9.classList.add("w3-light-grey", "w3-button");
+    btn10.classList.add("w3-light-grey", "w3-button");
+    btn11.classList.add("w3-light-grey", "w3-button");
+    btn12.classList.add("w3-light-grey", "w3-button");
 	btn1.style.height= "200px";
 	btn1.style.width= "200px";
 	btn2.style.height= "200px";
@@ -107,21 +131,27 @@
 	btn12.style.width= "200px";
 
 
-    document.body.appendChild(btn1);
-    document.body.appendChild(btn2);
-    document.body.appendChild(btn3);
-  	document.body.appendChild(btn4);
-  	document.body.appendChild(btn5);
-  	document.body.appendChild(btn6);
-  	document.body.appendChild(btn7);
-  	document.body.appendChild(btn8);
-  	document.body.appendChild(btn9);
-  	document.body.appendChild(btn10);
-  	document.body.appendChild(btn11);
-  	document.body.appendChild(btn12);
+    document.getElementById("this").appendChild(btn1);
+    document.getElementById("this").appendChild(btn2);
+    document.getElementById("this").appendChild(btn3);
+  	document.getElementById("this").appendChild(btn4);
+  	document.getElementById("this").appendChild(btn5);
+  	document.getElementById("this").appendChild(btn6);
+  	document.getElementById("this").appendChild(btn7);
+  	document.getElementById("this").appendChild(btn8);
+  	document.getElementById("this").appendChild(btn9);
+  	document.getElementById("this").appendChild(btn10);
+  	document.getElementById("this").appendChild(btn11);
+  	document.getElementById("this").appendChild(btn12);
 		}
 
-	</script>
-
+    </script>
+          
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+        <p>ByteSquad</p>
+    </footer>
+    
 </body>
+
 </html>
