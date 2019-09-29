@@ -1,8 +1,8 @@
-var answers = [" ", " ", " ", " "],
+var answers = ["A", "B", "C", "D","A", "B", "C", "D","A", "B"],
   tot = answers.length;
 
 function getCheckedValue(radioName) {
-  var radios = document.getElementsByName(radioName); // Get radio group by-name
+  var radios = document.getElements  ByName(radioName); // Get radio group by-name
   for (var y = 0; y < radios.length; y++)
     if (radios[y].checked) return radios[y].value; // return the checked value
 }
