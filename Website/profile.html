@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<title>UpStream - Profile</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="index.html" class="w3-bar-item w3-button"><b>UP</b>stream</a>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+            <a href="index.html" class="w3-bar-item w3-button">Home</a>
+            <a href="index.html" class="w3-bar-item w3-button">Logout</a>
+            <a href="about.html" class="w3-bar-item w3-button">About</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+    <!-- The Grid -->
+    <div class="w3-row">
+        <!-- Left Column -->
+        <div class="w3-col m3">
+        <!-- Profile -->
+        <div class="w3-card w3-round w3-white">
+            <div class="w3-container">
+                <h4 class="w3-center">John Doe</h4>
+                <p class="w3-center"><img src="john-doe.jpg" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+                <hr>
+                <p class="w3-center">Member since July 18, 2019</p>
+                <p class="w3-center">Greensboro, NC</p>
+            </div>
+        </div>
+        <br>
+        
+        <!-- Accordion -->
+        <div class="w3-card w3-round">
+            <div class="w3-white">
+            <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-light-grey w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i>Current Enrollment</button>
+            <div id="Demo1" class="w3-hide w3-container">
+                <p>CSS Essential Training 1</p>
+            </div>
+            <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-light-grey w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i>Completed Courses</button>
+            <div id="Demo3" class="w3-hide w3-container">
+                <p>Microsoft Office Certication</p>
+                <p>How to Lead</p>
+                <p>Public Speaking 101</p>
+            </div>
+            </div>      
+        </div>
+        <br>
+        
+        <!-- Interests --> 
+        <div class="w3-card w3-round w3-white w3-hide-small">
+            <div class="w3-container">
+            <p>Skills</p>
+            <p>
+                <span class="w3-tag w3-small">Microsoft Office</span>
+                <span class="w3-tag w3-small">Leadership</span>
+                <span class="w3-tag w3-small">Public Speaking</span>
+            </p>
+            </div>
+        </div>
+        <br>
+
+        <!-- End Left Column -->
+        </div>
+        
+        <!-- Middle Column -->
+        <div class="w3-col m6">
+        
+        <div class="w3-container w3-card w3-white w3-round w3-margin-right w3-margin-left w3-row-padding"><br>
+            <span class="w3-right w3-opacity">4 hours ago</span>
+            <h4>Customer Service Foundations</h4><br>
+            <hr class="w3-clear">
+            <p>Do your customers feel valued? When they do, they keep coming back. When they don't, your business suffers. In this course, writer and customer service consultant Jeff Toister teaches you the three crucial skill sets needed to deliver outstanding customer service and increase customer loyalty. Learn how to build winning relationships, provide the right assistance at the right times, and effectively handle angry customers. He also shares ways to find out what your customers really think about your service, and use their feedback to improve.</p>
+            <div class="w3-row-padding" style="margin:0 -16px">
+            </div>
+            <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="window.location.href = 'https://www.linkedin.com/learning/customer-service-foundations-2';">Go to Course</button> 
+        </div>
+        
+        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+            <span class="w3-right w3-opacity">9/20/2019</span>
+            <h4>HTML Essential Training</h4><br>
+            <hr class="w3-clear">
+            <p>HTML is the programming language that powers the web. And like any language, once you master it, you can begin to create your own content, whether that's simple websites or complex web applications. This course provides an in-depth look at the essentials: the syntax of HTML and best practices for writing and editing your code. Senior staff author James Williamson reviews the structure of a typical HTML document, and shows how to section pages and format your content with HTML. Plus, learn how to create links and lists, and find out how HTML works with CSS and JavaScript to create rich, engaging user experiences. So open a text editor, watch these videos, and begin learning to author HTML the right way.</p>
+            <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="window.location.href = 'https://www.linkedin.com/learning/html-essential-training';"">Go to Couse</button>
+        </div>  
+    
+        <!-- End Middle Column -->
+        </div>
+        
+        <!-- Right Column -->
+        <div class="w3-col m3">
+        <div class="w3-card w3-round w3-white w3-center">
+            <div class="w3-container w3-padding-32">
+                <button type="button" onclick="window.location.href = 'skills-assessment.html';" class="w3-button w3-light-grey w3-block"><b>Take Skills Assessment</b></button></br>
+                <button type="button" onclick="window.location.href = 'job-search.html';" class="w3-button w3-light-grey w3-block"><b>Jobs Search</b></button></br>
+                <button type="button" class="w3-button w3-light-grey w3-block"><b>My Services</b></button>
+            </div>
+        </div>
+        <br>
+        
+        <div class="w3-card w3-round w3-white w3-center">
+            <div class="w3-container">
+                <p>Visit My LinkedIn Account</p>
+                <p class="w3-center"><a href="http://linkedin.com"><img src="linked-in-logo.jpg" style="height:106px" alt="Avatar"></a></p>
+            </div>
+        </div>
+        <br>
+        
+        <!-- End Right Column -->
+        </div>
+      
+        
+    <!-- End Grid -->
+    </div>
+    
+<!-- End Page Container -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+    <p>ByteSquad</p>
+</footer>
+
+<script>
+        // Accordion
+        function myFunction(id) {
+          var x = document.getElementById(id);
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+            x.previousElementSibling.className += " w3-theme-d1";
+          } else { 
+            x.className = x.className.replace("w3-show", "");
+            x.previousElementSibling.className = 
+            x.previousElementSibling.className.replace(" w3-theme-d1", "");
+          }
+        }
+</script>        
+
+</body>
+</html>
