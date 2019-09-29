@@ -2,9 +2,102 @@
 <html>
 <head>
 	<title>codelinc6</title>
-	<h1>Job Search</h1>
+	<h1><center>Job Search</center></h1>	
+
 </head>
-<body>
+<body onload="btns()">
+	
+
+	<div class="block">
+
+    <label>Enter Job criteria</label>
+    <input id="textbox" type="text" />
+    <button id="btn1" onclick="btns()" style="height:21px; width:120px">Search</button>
+	
+	</div>
+
+	<br><br>
+
+	<script type="text/javascript">
+		var techJobs= ["Software",""];
+		var medical = ["Medical", "Concentra - Staff Physician - FullTime","Department of Veterans Affairs - Lead Medical Support Assistant - FullTime", "Quest Guilford County - Veterinary Health Care Technician - FullTime"];
+		var up = medical;
+		var list = "m";
+		//list = document.getElementById('textbox').innerHTML;
+
+		function btns() {
+  var btn1 = document.createElement("BUTTON");
+  var btn2 = document.createElement("BUTTON");
+  var btn3 = document.createElement("BUTTON");
+  var btn4 = document.createElement("BUTTON");
+  var btn5 = document.createElement("BUTTON");
+  var btn6 = document.createElement("BUTTON");
+  var btn7 = document.createElement("BUTTON");
+  var btn8 = document.createElement("BUTTON");
+  var btn9 = document.createElement("BUTTON");
+  var btn10 = document.createElement("BUTTON");
+  var btn11 = document.createElement("BUTTON");
+  var btn12 = document.createElement("BUTTON");
+  	
+    //btn1.style.backgroundImage = "url('cloudsImage.jpg')";
+    if (list==="s") {
+    	up=techJobs;
+    }
+    btn1.innerHTML = up[1]; 
+    btn2.innerHTML = up[2]; 
+    btn3.innerHTML = up[0]; 
+    btn4.innerHTML = up[0]; 
+    btn5.innerHTML = up[0];
+	btn6.innerHTML = up[0]; 
+	btn7.innerHTML = up[0]; 
+	btn8.innerHTML = up[0];
+	btn9.innerHTML = up[0];
+	btn10.innerHTML = up[0];
+	btn11.innerHTML = up[0];
+	btn12.innerHTML = up[0]; 
+
+
+	btn1.style.height= "200px";
+	btn1.style.width= "200px";
+	btn2.style.height= "200px";
+	btn2.style.width= "200px";
+	btn3.style.height= "200px";
+	btn3.style.width= "200px";
+	btn4.style.height= "200px";
+	btn4.style.width= "200px";
+	btn5.style.height= "200px";
+	btn5.style.width= "200px";
+	btn6.style.height= "200px";
+	btn6.style.width= "200px";
+	btn7.style.height= "200px";
+	btn7.style.width= "200px";
+	btn8.style.height= "200px";
+	btn8.style.width= "200px";
+	btn9.style.height= "200px";
+	btn9.style.width= "200px";
+	btn10.style.height= "200px";
+	btn10.style.width= "200px";
+	btn11.style.height= "200px";
+	btn11.style.width= "200px";
+	btn12.style.height= "200px";
+	btn12.style.width= "200px";
+
+
+    document.body.appendChild(btn1);
+    document.body.appendChild(btn2);
+    document.body.appendChild(btn3);
+  	document.body.appendChild(btn4);
+  	document.body.appendChild(btn5);
+  	document.body.appendChild(btn6);
+  	document.body.appendChild(btn7);
+  	document.body.appendChild(btn8);
+  	document.body.appendChild(btn9);
+  	document.body.appendChild(btn10);
+  	document.body.appendChild(btn11);
+  	document.body.appendChild(btn12);
+		}
+
+	</script>
 
 </body>
 </html>
